@@ -3,7 +3,7 @@
 /bin/
 /out/
 *.exe
-*.dll
 *.obj
-*.lib
+#*.dll
+#*.lib
 
