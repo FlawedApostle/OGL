@@ -31,6 +31,7 @@ int main(void)
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
+    /// have to call after glfwMake context
     GLenum err = glewInit();
     if (GLEW_OK != err)
     {
