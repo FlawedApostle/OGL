@@ -1,6 +1,7 @@
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <SDL3_image/SDL_image.h>
 #include <stdio.h>
 
 //#include <glad/glad.h>
