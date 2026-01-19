@@ -9,6 +9,9 @@
 #include "Initialize.h"
 #include "Timer.h"
 
+#include "glm/vec3.hpp"
+#include "SOIL/SOIL.h"
+
 //#include <glad/glad.h>
 GLFWwindow* window;
 Window _window;

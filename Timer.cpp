@@ -1,22 +1,8 @@
 #include <chrono>
-#include <format>
-#include <string>
-#include "Timer.h"
-
-/// because im in x86 build this wont work
-//std::string Timer::GetDateTime() {
-//    using namespace std::chrono;
-//
-//    auto now = zoned_time
-//    { 
-//        current_zone(), system_clock::now() 
-//    };
-//    return std::format("{:%Y-%m-%d %H:%M:%S}", now);
-//}
-
-#include <chrono>
 #include <iomanip>
 #include <sstream>
+#include <string>
+#include "Timer.h"
 
 std::string Timer::GetDateTime() {
     using namespace std::chrono;
@@ -36,3 +22,21 @@ std::string Timer::GetDateTime() {
     return ss.str();
 }
 
+
+/*
+#include <chrono>
+#include <format>
+#include <string>
+#include "Timer.h"
+
+ because im in x86 build this wont work
+std::string Timer::GetDateTime() {
+    using namespace std::chrono;
+
+    auto now = zoned_time
+    {
+        current_zone(), system_clock::now()
+    };
+    return std::format("{:%Y-%m-%d %H:%M:%S}", now);
+}
+*/
