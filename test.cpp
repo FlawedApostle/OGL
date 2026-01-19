@@ -2,45 +2,52 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <SDL3_image/SDL_image.h>
+#include <iostream>
 #include <stdio.h>
 
-//#include <glad/glad.h>
+#include "Window.h"
 
+//#include <glad/glad.h>
+GLFWwindow* window;
+Window _window;
 int main(void)
 {
-    GLFWwindow* window;
+
+    
+    
+    
 
     /* Initialize the library */
     if (!glfwInit())
         return -1;
 
-
-
-   
-    
-    
+  
     /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    //window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    //if (!window)
+    //{
+    //    glfwTerminate();
+    //    return -1;
+    //}
+
+    _window.DeployWindow(&window);
     if (!window)
     {
-        glfwTerminate();
         return -1;
     }
-
-
 
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
     /// have to call after glfwMake context
     GLenum err = glewInit();
-    if (GLEW_OK != err)
-    {
-        /* Problem: glewInit failed, something is seriously wrong. */
+    if (GLEW_OK != err){
         fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
     }
+   // Have to run after  glewInit() !
     printf("Status: GLEW OK !\n");
     fprintf(stdout, "Status: Using GLEW %s\n", glewGetString(GLEW_VERSION));
+    std::cout << glGetString(GL_VERSION) << std::endl;
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))

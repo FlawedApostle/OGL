@@ -1,2 +1,5 @@
-﻿  test.cpp
-  OGL.vcxproj -> C:\Users\JJaks\Documents\GitHubDir\OGL\x64\Debug\OGL.exe
+﻿  Window.cpp
+  test.cpp
+  Generating Code...
+E:\Documents\GithubDir\OGL\Window.cpp(20,1): warning C4715: 'Window::DeployWindow': not all control paths return a value
+  OGL.vcxproj -> E:\Documents\GithubDir\OGL\x64\Debug\OGL.exe
