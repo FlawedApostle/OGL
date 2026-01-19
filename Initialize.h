@@ -1,15 +1,11 @@
 #pragma once
 #include <iostream>
-#include "GLFW/glfw3.h"
 
-class Initialize {
+namespace Initialize {
+    bool initGLFW();
+    bool initGLAD();
 
-protected:
-
-public:
-
-
-    void initGLFW();
+    //void initGlew();
 
 
 };

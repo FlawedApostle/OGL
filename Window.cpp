@@ -1,7 +1,8 @@
+#include "glad/glad.h"
+#include <GLFW/glfw3.h>
+
 #include <iostream>
 #include "Window.h"
-
-
 // this is a pointer to a pointer
 // 
 GLFWwindow* Window::DeployWindow(GLFWwindow** win)
