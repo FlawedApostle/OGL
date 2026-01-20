@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\Documents\\GithubDir\\OGL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|E:\\Documents\\GithubDir\\OGL\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|E:\\Documents\\GithubDir\\OGL\\Initialize.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:Initialize.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|E:\\Documents\\GithubDir\\OGL\\Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|E:\\Documents\\GithubDir\\OGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|E:\\Documents\\GithubDir\\OGL\\Timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:Timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|E:\\Documents\\GithubDir\\OGL\\Initialize.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:Initialize.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 229,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +30,47 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Timer.h",
-              "DocumentMoniker": "E:\\Documents\\GithubDir\\OGL\\Timer.h",
-              "RelativeDocumentMoniker": "Timer.h",
-              "ToolTip": "E:\\Documents\\GithubDir\\OGL\\Timer.h",
-              "RelativeToolTip": "Timer.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwMAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Initialize.h",
+              "DocumentMoniker": "E:\\Documents\\GithubDir\\OGL\\Initialize.h",
+              "RelativeDocumentMoniker": "Initialize.h",
+              "ToolTip": "E:\\Documents\\GithubDir\\OGL\\Initialize.h",
+              "RelativeToolTip": "Initialize.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-01-19T17:23:12.198Z",
+              "WhenOpened": "2026-01-19T23:43:49.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Timer.cpp",
-              "DocumentMoniker": "E:\\Documents\\GithubDir\\OGL\\Timer.cpp",
-              "RelativeDocumentMoniker": "Timer.cpp",
-              "ToolTip": "E:\\Documents\\GithubDir\\OGL\\Timer.cpp",
-              "RelativeToolTip": "Timer.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "E:\\Documents\\GithubDir\\OGL\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "E:\\Documents\\GithubDir\\OGL\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwCEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-19T17:23:02.482Z",
+              "WhenOpened": "2026-01-17T15:17:39.244Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 229,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "test.cpp",
-              "DocumentMoniker": "E:\\Documents\\GithubDir\\OGL\\test.cpp",
-              "RelativeDocumentMoniker": "test.cpp",
-              "ToolTip": "E:\\Documents\\GithubDir\\OGL\\test.cpp",
-              "RelativeToolTip": "test.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Title": "Initialize.cpp",
+              "DocumentMoniker": "E:\\Documents\\GithubDir\\OGL\\Initialize.cpp",
+              "RelativeDocumentMoniker": "Initialize.cpp",
+              "ToolTip": "E:\\Documents\\GithubDir\\OGL\\Initialize.cpp",
+              "RelativeToolTip": "Initialize.cpp",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAkwBgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-17T15:17:39.244Z",
+              "WhenOpened": "2026-01-19T23:42:33.509Z",
               "EditorCaption": ""
             }
           ]

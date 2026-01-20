@@ -16,15 +16,36 @@ bool Initialize::initGLFW() {
 bool Initialize::initGLAD() {
     /// Glad Loader
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    
     {
         std::cerr << "Failed to initialize GLAD\n";
         return false;
     }
     
     printf("GLAD Initialized\n");
-    std::cout << glGetString(GL_VERSION) << std::endl;
     return true;
+}
+
+bool Initialize::SetWindowContext()
+{
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4); 
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); 
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+   
+    return false;
+}
+
+bool Initialize::GetGLFWInfo()
+{
+    if (initGLFW() == GLFW_TRUE && initGLAD() != NULL) {
+    const GLubyte* version = glGetString(GL_VERSION);
+    const GLubyte* renderer = glGetString(GL_RENDERER);
+    const GLubyte* vendor = glGetString(GL_VENDOR);
+
+    std::cout << "GLFW VERSION: " << version <<std::endl;
+    std::cout << "GLFW RENDERER: " << renderer <<std::endl;
+    std::cout << "GLFW VENDOR: " << vendor <<std::endl;
+}
+    return false;
 }
 
 
