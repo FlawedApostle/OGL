@@ -8,3 +8,5 @@
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.bin filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
+*.dll,[[:space:]]*.so,[[:space:]]*.dylib,[[:space:]]*.lib,[[:space:]]*.a,[[:space:]]*.pdb filter=lfs diff=lfs merge=lfs -text
+[[:space:]]*.png,[[:space:]]*.jpg,[[:space:]]*.tga,[[:space:]]*.dds,[[:space:]]*.bmp,[[:space:]]*.hdr,[[:space:]]*ext filter=lfs diff=lfs merge=lfs -text
