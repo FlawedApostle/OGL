@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:Initialize.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|E:\\Documents\\GithubDir\\OGL\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|E:\\Documents\\GithubDir\\OGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|E:\\Documents\\GithubDir\\OGL\\Initialize.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:Initialize.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|E:\\Documents\\GithubDir\\OGL\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|E:\\Documents\\GithubDir\\OGL\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -46,12 +46,11 @@
               "RelativeToolTip": "Window.h",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-01-20T00:13:11.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T00:13:11.364Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Initialize.h",
               "DocumentMoniker": "E:\\Documents\\GithubDir\\OGL\\Initialize.h",
               "RelativeDocumentMoniker": "Initialize.h",
@@ -59,18 +58,17 @@
               "RelativeToolTip": "Initialize.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-01-19T23:43:49.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-19T23:43:49.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "main.cpp",
               "DocumentMoniker": "E:\\Documents\\GithubDir\\OGL\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "E:\\Documents\\GithubDir\\OGL\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAqwCkAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAcwBQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-17T15:17:39.244Z",
               "EditorCaption": ""
@@ -89,20 +87,20 @@
               "RelativeDocumentMoniker": "Initialize.cpp",
               "ToolTip": "E:\\Documents\\GithubDir\\OGL\\Initialize.cpp",
               "RelativeToolTip": "Initialize.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-19T23:42:33.509Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Window.cpp",
               "DocumentMoniker": "E:\\Documents\\GithubDir\\OGL\\Window.cpp",
               "RelativeDocumentMoniker": "Window.cpp",
               "ToolTip": "E:\\Documents\\GithubDir\\OGL\\Window.cpp",
               "RelativeToolTip": "Window.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-20T00:13:11.941Z",
               "EditorCaption": ""

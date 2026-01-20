@@ -36,15 +36,13 @@ bool Initialize::SetWindowContext()
 
 bool Initialize::GetGLFWInfo()
 {
-    if (initGLFW() == GLFW_TRUE && initGLAD() != NULL) {
     const GLubyte* version = glGetString(GL_VERSION);
     const GLubyte* renderer = glGetString(GL_RENDERER);
     const GLubyte* vendor = glGetString(GL_VENDOR);
 
-    std::cout << "GLFW VERSION: " << version <<std::endl;
-    std::cout << "GLFW RENDERER: " << renderer <<std::endl;
-    std::cout << "GLFW VENDOR: " << vendor <<std::endl;
-}
+    std::cout << "GLFW VERSION: " << version << std::endl;
+    std::cout << "GLFW RENDERER: " << renderer << std::endl;
+    std::cout << "GLFW VENDOR: " << vendor << std::endl;
     return false;
 }
 
