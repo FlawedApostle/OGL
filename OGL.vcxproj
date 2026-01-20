@@ -154,11 +154,13 @@
     <ClCompile Include="glad.c" />
     <ClCompile Include="Initialize.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ReadFile.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Initialize.h" />
+    <ClInclude Include="ReadFile.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
