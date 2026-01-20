@@ -1,10 +1,35 @@
-# Build artifacts
+# --- Build Artifacts ---
 /build/
 /bin/
 /out/
 *.exe
 *.obj
+*.o
+*.out
 
-#*.dll
-#*.lib
+# --- OpenGL/External Bloat ---
+# If using vcpkg or submodules, don't track the build folders
+vcpkg_installed/
+external/build/
 
+# --- Visual Studio Bloat (The biggest space killers) ---
+.vs/
+*.user
+*.suo
+*.db
+*.ipch
+*.opendb
+*.VC.db
+*.sln.doccache
+
+# --- Compiled Libs (Keep commented ONLY if you manually supply them) ---
+# *.dll
+# *.lib
+# *.a
+# *.so
+
+# --- Assets ---
+# Don't track massive raw assets. Use smaller optimized versions or Git LFS.
+*.raw
+*.psd
+*.tmp
