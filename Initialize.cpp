@@ -34,7 +34,8 @@ bool Initialize::SetWindowContext()
     return false;
 }
 
-bool Initialize::GetGLFWInfo()
+// Wont run untill Context is set
+bool Initialize::GetDriveInfo()                         
 {
     const GLubyte* version = glGetString(GL_VERSION);
     const GLubyte* renderer = glGetString(GL_RENDERER);

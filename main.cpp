@@ -1,3 +1,4 @@
+
 #include "glad/glad.h"
 #include <GLFW/glfw3.h>
 #include <SDL3_image/SDL_image.h>
@@ -18,44 +19,49 @@ Window _window;
 int main(void)
 {
 
-	ReadFile::ReadFile("test.txt");
+	//ReadFile::ReadFile("test.txt");
 
 
-    //std::cout << Timer::GetDateTime() << std::endl;
-    //Initialize::initGLFW();
-    //Initialize::SetWindowContext();
+    std::cout << Timer::GetDateTime() << std::endl;
+    Initialize::initGLFW();
+    Initialize::SetWindowContext();
  
-    //_window.DeployWindow(&window);      // load window
-    //if (!window) {
-    //    return -1;
-    //}
-    ///* Make the window's context current */
-    //glfwMakeContextCurrent(window);
+    _window.InitWindow(&window);      // load window
+    if (!window) {
+        return -1;
+    }
 
-    ///// Glad Loader
-    //if (!window) return false;
-    //Initialize::initGLAD();
+
+    /// Glad Loader
+    if (!window) return false;
+    Initialize::initGLAD();
    
-    //Initialize::GetGLFWInfo();
+    Initialize::GetDriveInfo();
 
 
   
 
-    ///* Loop until the user closes the window */
-    //while (!glfwWindowShouldClose(window))
-    //{
-    //    /* Render here */
-    //    glClear(GL_COLOR_BUFFER_BIT);
+    /* Loop until the user closes the window */
+    while (!glfwWindowShouldClose(window))
+    {
+		_window.DisplayWindow(window, glfwGetTime());
+        /* Render here */
+        double time = glfwGetTime();
+        glClearColor(static_cast<float>(sin(time) * 0.5 + 0.5), static_cast<float>(cos(time) * 0.5 + 0.5), 0.0f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
 
-    //    /* Swap front and back buffers */
-    //    glfwSwapBuffers(window);
+        /* Swap front and back buffers */
+        glfwSwapBuffers(window);
 
-    //    /* Poll for and process events */
-    //    glfwPollEvents();
-    //}
+        /* Poll for and process events */
+        glfwPollEvents();
+    }
 
-    //glfwTerminate();
-    //return 0;
+
+    glfwDestroyWindow(window);
+    glfwTerminate();
+    exit(EXIT_SUCCESS);
+    return 0;
 
 
 

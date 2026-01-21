@@ -8,7 +8,7 @@ namespace Initialize {
     bool initGLAD();
 
     bool SetWindowContext();
-    bool GetGLFWInfo();
+    bool GetDriveInfo();
 
 };
 

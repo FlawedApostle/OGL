@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\ReadFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:ReadFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\ReadFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:ReadFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\Window.h||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{96D0EA8D-E890-4155-B402-578CF314EE81}|OGL.vcxproj|solutionrelative:Window.h||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ReadFile.h",
-              "DocumentMoniker": "C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\ReadFile.h",
-              "RelativeDocumentMoniker": "ReadFile.h",
-              "ToolTip": "C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\ReadFile.h",
-              "RelativeToolTip": "ReadFile.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAnAAAAAAAAAA==",
+              "Title": "Window.h",
+              "DocumentMoniker": "C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\Window.h",
+              "RelativeDocumentMoniker": "Window.h",
+              "ToolTip": "C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\Window.h",
+              "RelativeToolTip": "Window.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-01-20T18:43:21.426Z",
+              "WhenOpened": "2026-01-21T20:23:37.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ReadFile.cpp",
-              "DocumentMoniker": "C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\ReadFile.cpp",
-              "RelativeDocumentMoniker": "ReadFile.cpp",
-              "ToolTip": "C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\ReadFile.cpp",
-              "RelativeToolTip": "ReadFile.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Title": "Window.cpp",
+              "DocumentMoniker": "C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\Window.cpp",
+              "RelativeDocumentMoniker": "Window.cpp",
+              "ToolTip": "C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\Window.cpp",
+              "RelativeToolTip": "Window.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-20T18:42:51.599Z",
+              "WhenOpened": "2026-01-21T20:19:11.502Z",
               "EditorCaption": ""
             },
             {
@@ -58,7 +58,7 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\JJaks\\Documents\\GitHubDir\\OGL\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-17T15:17:39.244Z",
               "EditorCaption": ""

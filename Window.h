@@ -11,6 +11,7 @@ public:
 
     GLFWwindow* testWin;
 
-    GLFWwindow* DeployWindow(GLFWwindow** win);
+	GLFWwindow* InitWindow(GLFWwindow** win);                   // create the window using the initialized var the user provides
+	void DisplayWindow(GLFWwindow* window, double time);        // Display the window with time - color, and clear
 
 };
