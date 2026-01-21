@@ -23,10 +23,10 @@ external/build/
 *.sln.doccache
 
 # --- Compiled Libs (Keep commented ONLY if you manually supply them) ---
-# *.dll
-# *.lib
-# *.a
-# *.so
+ *.dll
+ *.lib
+ *.a
+ *.so
 
 # --- Assets ---
 # Don't track massive raw assets. Use smaller optimized versions or Git LFS.
