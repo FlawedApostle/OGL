@@ -2,10 +2,16 @@
 /build/
 /bin/
 /out/
+x64/
+Debug/
+Release/
 *.exe
 *.obj
 *.o
 *.out
+*.tmp
+*.tlog
+
 
 # --- OpenGL/External Bloat ---
 # If using vcpkg or submodules, don't track the build folders
@@ -21,15 +27,20 @@ external/build/
 *.opendb
 *.VC.db
 *.sln.doccache
+*.cache
+*.recipe
+*.pdb
 
 # --- Compiled Libs (Keep commented ONLY if you manually supply them) ---
- *.dll
- *.lib
- *.a
- *.so
+*.dll
+*.lib
+*.a
+*.so
+*.idb
+
 
 # --- Assets ---
 # Don't track massive raw assets. Use smaller optimized versions or Git LFS.
 *.raw
 *.psd
-*.tmp
+
