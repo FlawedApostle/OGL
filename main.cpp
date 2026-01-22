@@ -4,7 +4,9 @@
 #include "SDL3_image/SDL_image.h"       // image SDL
 #include "SOIL/SOIL.h"                  // image openGL
 #include "glm/vec3.hpp"                 // math
-#include "TOL/tiny_obj_loader.h"
+#include "TOL/tiny_obj_loader.h"        // fbx loader - tinyOBJ - header only
+#include "ASSIMP/config.h"              // fbx - assimp static lib
+#include "ASSIMP/revision.h"            // fbx - assimp static lib
 #include <iostream>
 #include <stdio.h>
 
