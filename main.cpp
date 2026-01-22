@@ -1,10 +1,10 @@
 
 #include "glad/glad.h"
-#include <GLFW/glfw3.h>
-#include <SDL3_image/SDL_image.h>
-#include "glm/vec3.hpp"
-#include "SOIL/SOIL.h"
-
+#include "GLFW/glfw3.h"
+#include "SDL3_image/SDL_image.h"       // image SDL
+#include "SOIL/SOIL.h"                  // image openGL
+#include "glm/vec3.hpp"                 // math
+#include "TOL/tiny_obj_loader.h"
 #include <iostream>
 #include <stdio.h>
 
