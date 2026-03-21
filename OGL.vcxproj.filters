@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Scripts\Window">
+      <UniqueIdentifier>{b6e60fd6-9914-47e3-916e-7bc3d67373a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Timer">
+      <UniqueIdentifier>{bc986d1f-f2c6-4d59-b4fa-f72f67d8257c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Initialize">
+      <UniqueIdentifier>{0ba77628-cbd4-4971-87fd-970bb9cf6d15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependecies">
+      <UniqueIdentifier>{890a59ce-8d82-4e7c-bd69-d60166daaa27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependecies\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Dependecies\ReadFile">
+      <UniqueIdentifier>{16b9d560-4b96-4ee9-b239-90f74d027cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Scripts\TestFunctions">
+      <UniqueIdentifier>{cd0ad422-b741-4900-8d3f-d3b64eef1e25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Shader">
+      <UniqueIdentifier>{0b9cddf4-fb53-465a-b691-175e9cb402fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Mat4">
+      <UniqueIdentifier>{0934bb6f-b99e-4623-8c17-e93324d7953f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Render">
+      <UniqueIdentifier>{c8914676-2049-4f09-acfb-1a7c0b0cdd0b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Scripts\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Initialize.cpp">
+      <Filter>Scripts\Initialize</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Scripts\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadFile.cpp">
+      <Filter>Dependecies\ReadFile</Filter>
+    </ClCompile>
+    <ClCompile Include="TestFunctions.cpp">
+      <Filter>Scripts\TestFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Scripts\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix4.cpp">
+      <Filter>Scripts\Mat4</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering.cpp">
+      <Filter>Scripts\Render</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Window.h">
+      <Filter>Scripts\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Initialize.h">
+      <Filter>Scripts\Initialize</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Scripts\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadFile.h">
+      <Filter>Dependecies\ReadFile</Filter>
+    </ClInclude>
+    <ClInclude Include="TestFunctions.h">
+      <Filter>Scripts\TestFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Scripts\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix4.h">
+      <Filter>Scripts\Mat4</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering.h">
+      <Filter>Scripts\Render</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
