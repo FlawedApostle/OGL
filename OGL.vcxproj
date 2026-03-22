@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ErrorChecking.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Initialize.cpp" />
     <ClCompile Include="main.cpp" />
@@ -163,6 +164,7 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ErrorChecking.h" />
     <ClInclude Include="Initialize.h" />
     <ClInclude Include="Matrix4.h" />
     <ClInclude Include="ReadFile.h" />

@@ -4,6 +4,8 @@
 
 #include "TestFunctions.h"
 
+#include "ErrorChecking.h"
+
 TestFunctions::~TestFunctions()
 {
 }

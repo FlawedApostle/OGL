@@ -40,6 +40,9 @@
     <Filter Include="Scripts\Render">
       <UniqueIdentifier>{c8914676-2049-4f09-acfb-1a7c0b0cdd0b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scripts\ErrorChecking">
+      <UniqueIdentifier>{f82555ba-bb59-4ec5-a535-e31153eb2052}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -72,6 +75,9 @@
     <ClCompile Include="Rendering.cpp">
       <Filter>Scripts\Render</Filter>
     </ClCompile>
+    <ClCompile Include="ErrorChecking.cpp">
+      <Filter>Scripts\ErrorChecking</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -97,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="Rendering.h">
       <Filter>Scripts\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorChecking.h">
+      <Filter>Scripts\ErrorChecking</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
