@@ -1,4 +1,5 @@
-#include "GLFW/glfw3.h"
+#include "glad/glad.h"
+//#include "GLFW/glfw3.h"
 #include <iostream>
 #include "ErrorChecking.h"
 
@@ -14,4 +15,31 @@ bool ErrorChecking::checkOpenGLError()
 		glErr = glGetError();
 	}
 	return foundError;
+}
+
+
+// Returns the number of characters in the information log	https://registry.khronos.org/OpenGL-Refpages/es2.0/xhtml/glGetProgramiv.xml
+void printShaderLog(GLuint shader) {
+	int len = 0;
+	int chWrittn = 0;
+	char* log;
+	glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &len);
+	if (len > 0) {
+		log = (char*)malloc(len);
+		glGetShaderInfoLog(shader, len, &chWrittn, log);
+		std::cout << "Shader Info Log: " << log << std::endl;
+		free(log);
+	}
+}
+void printProgramLog(int prog) {
+	int len = 0;
+	int chWrittn = 0;
+	char* log;
+	glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &len);
+	if (len > 0) {
+		log = (char*)malloc(len);
+		glGetProgramInfoLog(prog, len, &chWrittn, log);
+		std::cout << "Program Info Log: " << log << std::endl;
+		free(log);
+	}
 }

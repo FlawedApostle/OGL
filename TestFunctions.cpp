@@ -36,6 +36,8 @@ GLuint TestFunctions::Render2()
 	glShaderSource(vShader, 1, &vShaderSource, NULL);
 	glShaderSource(fShader, 1, &fShaderSource, NULL);
 	glCompileShader(vShader);
+	// debug
+	
 	glCompileShader(fShader);
 
 	GLuint vfProgram = glCreateProgram();
