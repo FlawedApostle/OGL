@@ -19,7 +19,7 @@ bool ErrorChecking::checkOpenGLError()
 
 
 // Returns the number of characters in the information log	https://registry.khronos.org/OpenGL-Refpages/es2.0/xhtml/glGetProgramiv.xml
-void printShaderLog(GLuint shader) {
+void ErrorChecking::printShaderLog(GLuint shader) {
 	int len = 0;
 	int chWrittn = 0;
 	char* log;
@@ -31,7 +31,7 @@ void printShaderLog(GLuint shader) {
 		free(log);
 	}
 }
-void printProgramLog(int prog) {
+void ErrorChecking::printProgramLog(int prog) {
 	int len = 0;
 	int chWrittn = 0;
 	char* log;
