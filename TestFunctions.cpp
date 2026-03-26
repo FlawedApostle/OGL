@@ -8,8 +8,9 @@
 
 TestFunctions::~TestFunctions()
 {
-	//if (vShader == true) { glDeleteShader(vShader); }
-	//if (fShader == true) { glDeleteShader(fShader); }
+	
+	//glDeleteShader(vShader);
+	//glDeleteShader(fShader);
 	
 }
 
@@ -49,7 +50,7 @@ GLuint TestFunctions::Render2()
 	glCompileShader(vShader);
 	ErrorChecking::checkOpenGLError();									// debug
 	glGetShaderiv(vShader, GL_COMPILE_STATUS, &vertCompiled);
-	if (vertCompiled != 1) {
+	if (vertCompiled != GL_TRUE) {
 		std::cout << "vertex compilation failed" << std::endl;
 		ErrorChecking::printShaderLog(vShader);
 	}
@@ -57,8 +58,8 @@ GLuint TestFunctions::Render2()
 	glCompileShader(fShader);
 	ErrorChecking::checkOpenGLError();									// debug
 	glGetShaderiv(fShader, GL_COMPILE_STATUS, &fragCompiled);
-	if (fragCompiled != 1) {
-		std::cout << "vertex compilation failed" << std::endl;
+	if (fragCompiled != GL_TRUE) {
+		std::cout << "fragment compilation failed" << std::endl;
 		ErrorChecking::printShaderLog(fShader);
 	}
 
@@ -71,15 +72,17 @@ GLuint TestFunctions::Render2()
 	
 	// ---- Link the program
 	glLinkProgram(vfProgram);
-	ErrorChecking::checkOpenGLError();									// debug
+	//ErrorChecking::checkOpenGLError();									// debug
 	glGetProgramiv(vfProgram, GL_LINK_STATUS, &linked);
-	if (linked != 1) {
-		std::cout << "linking failed" << std::endl;
+	if (linked != GL_TRUE) {
+		std::cout << "linking failed\n";
 		ErrorChecking::printProgramLog(vfProgram);
 	}
 
+	// ---- Cache Delete after LINKING
+	glDeleteShader(vShader);
+	glDeleteShader(fShader);
 	
-
 	return vfProgram;
 
 
