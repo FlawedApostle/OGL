@@ -8,8 +8,8 @@
 
 TestFunctions::~TestFunctions()
 {
-	if (vShader == true) { glDeleteShader(vShader); }
-	if (fShader == true) { glDeleteShader(fShader); }
+	//if (vShader == true) { glDeleteShader(vShader); }
+	//if (fShader == true) { glDeleteShader(fShader); }
 	
 }
 
@@ -63,6 +63,7 @@ GLuint TestFunctions::Render2()
 	}
 
 
+	GLuint vfProgram = glCreateProgram();
 
 	// ---- Attach The Shader
 	glAttachShader(vfProgram, vShader);
@@ -77,7 +78,6 @@ GLuint TestFunctions::Render2()
 		ErrorChecking::printProgramLog(vfProgram);
 	}
 
-	GLuint vfProgram = glCreateProgram();
 	
 
 	return vfProgram;
