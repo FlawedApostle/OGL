@@ -5,6 +5,7 @@ namespace ErrorChecking
 	 void printShaderLog(GLuint shader);
 	 void printProgramLog(int prog);
 
+	 bool CheckShaderCompile(GLuint shader);
 
 };
 

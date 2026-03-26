@@ -43,3 +43,17 @@ void ErrorChecking::printProgramLog(int prog) {
 		free(log);
 	}
 }
+
+bool ErrorChecking::CheckShaderCompile(GLuint shader)
+{
+	GLint compiled = 0;
+	glGetShaderiv(shader, GL_COMPILE_STATUS, &compiled);
+
+	if (compiled != GL_TRUE) {
+		std::cout << "Shader compilation failed\n";
+		ErrorChecking::printShaderLog(shader);
+		return false; // false = failure
+	}
+
+	return true; // true = success
+}

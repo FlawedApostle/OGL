@@ -54,6 +54,8 @@ GLuint TestFunctions::Render2()
 		std::cout << "vertex compilation failed" << std::endl;
 		ErrorChecking::printShaderLog(vShader);
 	}
+
+
 	// ---- Compile -- FRAG
 	glCompileShader(fShader);
 	ErrorChecking::checkOpenGLError();									// debug
