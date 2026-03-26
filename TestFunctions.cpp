@@ -21,7 +21,7 @@ void TestFunctions::Render1(double time)
 
 GLuint TestFunctions::Render2()
 {
-
+	// ---- Debugging vars
 	GLint vertCompiled;
 	GLint fragCompiled;
 	GLint linked;
@@ -37,9 +37,9 @@ GLuint TestFunctions::Render2()
 		"void main(void) \n"
 		"{color = vec4(0.0,0.0,1.0,1.0);}";								// {	if (gl_FragCoord.x < 295) color = vec4(1.0, 0.0, 0.0, 1.0); else color = vec4(0.0, 0.0, 1.0, 1.0);	} 
 
+	// ---- Create the shader(s)
 	GLuint vShader = glCreateShader(GL_VERTEX_SHADER);
 	GLuint fShader = glCreateShader(GL_FRAGMENT_SHADER);
-
 
 	// ---- Gather and read the shader txt files
 	glShaderSource(vShader, 1, &vShaderSource, NULL);
