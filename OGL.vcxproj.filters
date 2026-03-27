@@ -43,6 +43,9 @@
     <Filter Include="Scripts\ErrorChecking">
       <UniqueIdentifier>{f82555ba-bb59-4ec5-a535-e31153eb2052}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scripts\ReadShader">
+      <UniqueIdentifier>{76a2a895-c1be-4bff-8392-ad40ad0b6d80}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -78,6 +81,9 @@
     <ClCompile Include="ErrorChecking.cpp">
       <Filter>Scripts\ErrorChecking</Filter>
     </ClCompile>
+    <ClCompile Include="ReadShader.cpp">
+      <Filter>Scripts\ReadShader</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -106,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="ErrorChecking.h">
       <Filter>Scripts\ErrorChecking</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadShader.h">
+      <Filter>Scripts\ReadShader</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

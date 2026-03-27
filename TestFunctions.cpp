@@ -3,6 +3,7 @@
 #include "GLFW/glfw3.h"
 
 #include "TestFunctions.h"
+#include "ReadShader.h"
 
 #include "ErrorChecking.h"
 
@@ -35,9 +36,10 @@ GLuint TestFunctions::Render2()
 
 	// ---- COMPILE VERTEX
 	GLuint vShader = glCreateShader(GL_VERTEX_SHADER);
+	//const char* vertShaderSrc = ReadShader::ReadShaderSource(Documents/GithubDir/OGL/Dep/Shaders/);
 	glShaderSource(vShader, 1, &vShaderSource, NULL);					// ---- Gather and read the shader txt files
-	// DEBUG
 	glCompileShader(vShader);
+	// DEBUG
 	ErrorChecking::checkOpenGLError();								
 	
 	// ---- Debugging vars

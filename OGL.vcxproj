@@ -157,6 +157,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Matrix4.cpp" />
     <ClCompile Include="ReadFile.cpp" />
+    <ClCompile Include="ReadShader.cpp" />
     <ClCompile Include="Rendering.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="TestFunctions.cpp" />
@@ -168,6 +169,7 @@
     <ClInclude Include="Initialize.h" />
     <ClInclude Include="Matrix4.h" />
     <ClInclude Include="ReadFile.h" />
+    <ClInclude Include="ReadShader.h" />
     <ClInclude Include="Rendering.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="TestFunctions.h" />
