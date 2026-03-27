@@ -6,26 +6,21 @@
 
 #include "ErrorChecking.h"
 
-TestFunctions::~TestFunctions()
-{
-	
-	//glDeleteShader(vShader);
-	//glDeleteShader(fShader);
-	
-}
 
 void TestFunctions::Render1(double time)
 {
 	/*time = glfwGetTime();*/
-	glClearColor(static_cast<float>(sin(time) * 0.5 + 0.5), static_cast<float>(cos(time) * 0.5 + 0.5), 0.0f, 1.0f);
+	glClearColor(
+		static_cast<float>(sin(time) * 0.5 + 0.5)	, 
+		static_cast<float>(cos(time) * 0.5 + 0.5)	, 
+		0.0f, 1.0f);
+
+	glClear(GL_COLOR_BUFFER_BIT);
 }
 
 GLuint TestFunctions::Render2()
 {
-	// ---- Debugging vars
-	GLint vertCompiled;
-	GLint fragCompiled;
-	GLint linked;
+	GLint error_status;
 
 	const char* vShaderSource =
 		"#version 430	 \n"
@@ -38,50 +33,50 @@ GLuint TestFunctions::Render2()
 		"void main(void) \n"
 		"{color = vec4(0.0,0.0,1.0,1.0);}";								// {	if (gl_FragCoord.x < 295) color = vec4(1.0, 0.0, 0.0, 1.0); else color = vec4(0.0, 0.0, 1.0, 1.0);	} 
 
-	// ---- Create the shader(s)
+	// ---- COMPILE VERTEX
 	GLuint vShader = glCreateShader(GL_VERTEX_SHADER);
-	GLuint fShader = glCreateShader(GL_FRAGMENT_SHADER);
-
-	// ---- Gather and read the shader txt files
-	glShaderSource(vShader, 1, &vShaderSource, NULL);
-	glShaderSource(fShader, 1, &fShaderSource, NULL);
-	
-	// ---- Compile -- VERT
+	glShaderSource(vShader, 1, &vShaderSource, NULL);					// ---- Gather and read the shader txt files
+	// DEBUG
 	glCompileShader(vShader);
-	ErrorChecking::checkOpenGLError();									// debug
-	glGetShaderiv(vShader, GL_COMPILE_STATUS, &vertCompiled);
-	if (vertCompiled != GL_TRUE) {
+	ErrorChecking::checkOpenGLError();								
+	
+	// ---- Debugging vars
+	glGetShaderiv(vShader, GL_COMPILE_STATUS, &error_status);
+	if (error_status != GL_TRUE) {
 		std::cout << "vertex compilation failed" << std::endl;
 		ErrorChecking::printShaderLog(vShader);
 	}
 
 
-	// ---- Compile -- FRAG
+	// ---- COMPILE -- FRAG
+	GLuint fShader = glCreateShader(GL_FRAGMENT_SHADER);
+	glShaderSource(fShader, 1, &fShaderSource, NULL);					// ---- Gather and read the shader txt files
 	glCompileShader(fShader);
-	ErrorChecking::checkOpenGLError();									// debug
-	glGetShaderiv(fShader, GL_COMPILE_STATUS, &fragCompiled);
-	if (fragCompiled != GL_TRUE) {
+	// DEBUG
+	ErrorChecking::checkOpenGLError();
+	glGetShaderiv(fShader, GL_COMPILE_STATUS, &error_status);
+	if (error_status != GL_TRUE) {
 		std::cout << "fragment compilation failed" << std::endl;
 		ErrorChecking::printShaderLog(fShader);
 	}
 
-
+	// ---- CREATE PROG
 	GLuint vfProgram = glCreateProgram();
-
-	// ---- Attach The Shader
-	glAttachShader(vfProgram, vShader);
-	glAttachShader(vfProgram, fShader);
-	
-	// ---- Link the program
-	glLinkProgram(vfProgram);
-	//ErrorChecking::checkOpenGLError();									// debug
-	glGetProgramiv(vfProgram, GL_LINK_STATUS, &linked);
-	if (linked != GL_TRUE) {
+	glAttachShader(vfProgram, vShader);									// ---- Attach The Shader
+	glAttachShader(vfProgram, fShader);	
+	glLinkProgram(vfProgram);											// ---- Link the program
+	ErrorChecking::checkOpenGLError();									
+	// DEBUG
+	glGetProgramiv(vfProgram, GL_LINK_STATUS, &error_status);
+	if (error_status != GL_TRUE) {
 		std::cout << "linking failed\n";
 		ErrorChecking::printProgramLog(vfProgram);
 	}
 
-	// ---- Cache Delete after LINKING
+	// ---- Detach Shaders
+	glDetachShader(vfProgram, vShader);
+	glDetachShader(vfProgram, fShader);
+	// ---- Delete AFTER LINKING
 	glDeleteShader(vShader);
 	glDeleteShader(fShader);
 	

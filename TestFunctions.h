@@ -3,14 +3,16 @@ class  TestFunctions
 {
 public:
 
+
+	
 	struct GShader
 	{
 
 	};
+
 	static GLuint vShader;
 	static GLuint fShader;
 
-	~TestFunctions();
 	static void Render1(double time);
 	static GLuint Render2();
 
