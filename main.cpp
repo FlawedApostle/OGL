@@ -63,7 +63,7 @@ int main(void)
 
     // ------------------ Read the shader file
     std::string _filepath = "E:\\Documents\\GithubDir\\OGL\\Dep\\Shaders\\test.txt";
-    std::string _shadersrc = ReadShader::ReadShaderSource("E:\\Documents\\GithubDir\\OGL\\Dep\\Shaders\\test.txt");
+    std::string _shadersrc = ReadShader::ReadShaderSource(_filepath.c_str());               // CONVERT string to char to run through function - this is for debugging so I can check if the correct file is being read
     // DEBUG
     ReadShader::PrintShaderSourceFileName(_filepath);                           
     std::cout << "FILE CONTENT:\n" << _shadersrc << std::endl;
