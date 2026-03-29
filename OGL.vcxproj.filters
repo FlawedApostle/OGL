@@ -46,6 +46,9 @@
     <Filter Include="Scripts\ReadShader">
       <UniqueIdentifier>{76a2a895-c1be-4bff-8392-ad40ad0b6d80}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scripts\KeyCallbacks">
+      <UniqueIdentifier>{93d3b5c2-b57b-4988-a757-6a9437b34e7f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -84,6 +87,9 @@
     <ClCompile Include="ReadShader.cpp">
       <Filter>Scripts\ReadShader</Filter>
     </ClCompile>
+    <ClCompile Include="KeyCallbacks.cpp">
+      <Filter>Scripts\KeyCallbacks</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -115,6 +121,9 @@
     </ClInclude>
     <ClInclude Include="ReadShader.h">
       <Filter>Scripts\ReadShader</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyCallbacks.h">
+      <Filter>Scripts\KeyCallbacks</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

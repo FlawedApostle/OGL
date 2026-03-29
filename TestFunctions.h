@@ -2,8 +2,6 @@
 class  TestFunctions
 {
 public:
-
-
 	
 	struct GShader
 	{

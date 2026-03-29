@@ -7,6 +7,7 @@
 #include "TOL/tiny_obj_loader.h"        // fbx loader - tinyOBJ - header only
 #include "ASSIMP/config.h"              // fbx - assimp static lib
 #include "ASSIMP/revision.h"            // fbx - assimp static lib
+
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
@@ -18,6 +19,7 @@
 #include "TestFunctions.h"
 #include "ErrorChecking.h"
 #include "ReadShader.h"
+#include "KeyCallbacks.h"
 
 #define numVAOs 1                       //  preprocessor macro to re-write text to a number - Anytime numVAO is written its really a number = 1
 GLuint renderingProgram;                //  ID for storing rending program - To use for running in RENDER/WHILE-LOOP
@@ -25,6 +27,8 @@ GLuint vao[numVAOs];                    //  VERTEX ARRAY OBJECTS - WRAPPER FOR V
 
 // Shader Calls
 TestFunctions Shader_2;
+
+
 
 int main(void)
 {
@@ -61,12 +65,16 @@ int main(void)
     renderingProgram = Shader_2.Render2();                                      // NOTE:: NO LONGER STATIC - TESTFUNCTIONS IS NOW A CLASS 
     glPointSize(10.0f);
 
-    // ------------------ Read the shader file
+    
+    // ------------------ Read the shader file  -- ReadShaderFile.h
     std::string _filepath = "E:\\Documents\\GithubDir\\OGL\\Dep\\Shaders\\test.txt";
     std::string _shadersrc = ReadShader::ReadShaderSource(_filepath.c_str());               // CONVERT string to char to run through function - this is for debugging so I can check if the correct file is being read
     // DEBUG
     ReadShader::PrintShaderSourceFileName(_filepath);                           
     std::cout << "FILE CONTENT:\n" << _shadersrc << std::endl;
+
+    // ----------------- KEY CALLBACKS  -- KeyCallbacks.h
+    glfwSetKeyCallback(Window_Main.GetWindow(), KeyCallbacks::Key_callback_ESCAPE);
 
     /* Loop until the user closes the window */
     while (!Window_Main.WindowShouldClose())
@@ -74,26 +82,28 @@ int main(void)
         double time = glfwGetTime();
         
         
-        /* Render here */
+        // ------ BUFFER - SCREEN CLEAR
         glClear(GL_COLOR_BUFFER_BIT);                                           // CLEAR SCREEN BUFFER
         
-        //glUseProgram(renderingProgram);                                         // RUN THE PROGRAM
-        
-        //glDrawArrays(GL_POINTS, 0, 1);                                          // DRAW THE PROGRAM
-        
-        ErrorChecking::checkOpenGLError();                                      // DEBUGGING - OPENGL ERROR HANDLE
+        // ------ RUN AND DRAW SHADER PROG                                      // lOADING SHADER IN ---- 5. LOAD THE RENDERING PROGRAM 'OnCreate'
+        glUseProgram(renderingProgram);
+        glDrawArrays(GL_POINTS, 0, 1);                                          // DRAW
 
-        // ---------------- TEST FUNCTIONS
+        // ------ TEST FUNCTIONS
         //TestFunctions::Render1(time);
 
+        //if (glfwGetKey(Window_Main.GetWindow(), GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        //{
+        //    const int scancode = glfwGetKeyScancode(GLFW_KEY_ESCAPE);
+        //    printf("Escape\nScancode: %d\n" , scancode);
+        //    glfwSetWindowShouldClose(Window_Main.GetWindow(), GLFW_TRUE);
+        //}
 
-        /* Swap front and back buffers */
-        glfwSwapBuffers(Window_Main.GetWindow());
+
         glfwPollEvents();
-        //_window.Update();                                                     // SWAP BUFFERS MOVED TO WINDOW UPDATE
-
-        /* Poll for and process events */
-        glfwPollEvents();                                                       // DONE IN WINDOWS
+       
+        // ------ BUFFERS - WINDOW SCREEN
+        glfwSwapBuffers(Window_Main.GetWindow());
     }
 
 

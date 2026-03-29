@@ -8,6 +8,7 @@
 #include "ErrorChecking.h"
 
 
+
 void TestFunctions::Render1(double time)
 {
 	/*time = glfwGetTime();*/
