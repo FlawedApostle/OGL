@@ -8,6 +8,7 @@
 #include "ASSIMP/config.h"              // fbx - assimp static lib
 #include "ASSIMP/revision.h"            // fbx - assimp static lib
 #include <iostream>
+#include <fstream>
 #include <stdio.h>
 
 #include "Window.h"
@@ -16,6 +17,7 @@
 #include "ReadFile.h"
 #include "TestFunctions.h"
 #include "ErrorChecking.h"
+#include "ReadShader.h"
 
 #define numVAOs 1                       //  preprocessor macro to re-write text to a number - Anytime numVAO is written its really a number = 1
 GLuint renderingProgram;                //  ID for storing rending program - To use for running in RENDER/WHILE-LOOP
@@ -26,6 +28,17 @@ TestFunctions Shader_2;
 
 int main(void)
 {
+    std::ifstream test("E:\\Documents\\GithubDir\\OGL\\Dep\\Shaders\\");
+
+    if (test.is_open())
+    {
+        std::cout << "MINIMAL TEST: FILE OPENED\n";
+    }
+    else
+    {
+        std::cout << "MINIMAL TEST: FAILED\n";
+    }
+
     // 1. ------------------ LOAD GLFW _ SET OPENGL VER. CONTEXT
     std::cout << Timer::GetDateTime() << std::endl;
     Initialize::initGLFW();
@@ -44,9 +57,26 @@ int main(void)
     glGenVertexArrays(numVAOs, vao);
     glBindVertexArray(vao[0]);
 
-    // 5. ------------------ RENDERS
+    // 5. ------------------ LOAD THE RENDERING PROGRAM ------------------
     renderingProgram = Shader_2.Render2();                                      // NOTE:: NO LONGER STATIC - TESTFUNCTIONS IS NOW A CLASS 
     glPointSize(10.0f);
+
+    // ------------------ Read the shader file
+    //ReadShader::ReadShaderSource("E:/Documents/GithubDir/OGL/Dep/Shaders/shader.txt");           // E:\\Documents\\GithubDir\\OGL\\Dep\\Shaders\\
+
+    std::string path = "E:\\Documents\\GithubDir\\OGL\\Dep\\Shaders\\test.txt";
+    std::string src = ReadShader::ReadShaderSource(path.c_str());
+
+    // Print each character manually
+    for (size_t i = 0; i < path.size(); i++)
+    {
+        std::cout << path[i] << " (" << (int)path[i] << ")\n";
+    }
+
+
+    //std::string src = ReadShader::ReadShaderSource("E:/Documents/GithubDir/OGL/Dep/Shaders/shader.txt");
+
+    std::cout << "FILE CONTENT:\n" << src << std::endl;
 
     /* Loop until the user closes the window */
     while (!Window_Main.WindowShouldClose())
@@ -56,9 +86,10 @@ int main(void)
         
         /* Render here */
         glClear(GL_COLOR_BUFFER_BIT);                                           // CLEAR SCREEN BUFFER
-        glUseProgram(renderingProgram);                                         // RUN THE PROGRAM
         
-        glDrawArrays(GL_POINTS, 0, 1);                                          // DRAW THE PROGRAM
+        //glUseProgram(renderingProgram);                                         // RUN THE PROGRAM
+        
+        //glDrawArrays(GL_POINTS, 0, 1);                                          // DRAW THE PROGRAM
         
         ErrorChecking::checkOpenGLError();                                      // DEBUGGING - OPENGL ERROR HANDLE
 

@@ -1,22 +1,33 @@
 #include "ReadShader.h"
 #include <iostream>
 #include <fstream>
+#include <sstream>
+
 
 
 std::string ReadShader::ReadShaderSource(const char* filePath)
 {
-    std::string content;
-    std::ifstream fileStream;
-    std::string line = "";
+    std::cout << "PATH RECEIVED: [" << filePath << "]\n";
+    std::cout << "LENGTH: " << strlen(filePath) << "\n";
 
-    while (!fileStream.eof())
+    std::ifstream fileStream(filePath);
+
+    // DEBUG
+    std::cout << "GOOD: " << fileStream.good() << "\n";
+    std::cout << "FAIL: " << fileStream.fail() << "\n";
+    std::cout << "BAD: " << fileStream.bad() << "\n";
+    std::cout << "IS_OPEN: " << fileStream.is_open() << "\n";
+
+    if (!fileStream.is_open())
     {
-        std::getline(fileStream, line);
-        content.append(line + "\n");
-
-        std::cout << line << "\n" << std::endl;
+        std::cerr << "ERROR: Could not open shader file: " << filePath << std::endl;
+        return "";
     }
 
-    fileStream.close();
-    return content;
+
+    std::stringstream buffer;
+    buffer << fileStream.rdbuf();
+
+
+    return buffer.str();
 }

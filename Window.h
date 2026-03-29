@@ -21,8 +21,8 @@ public:
         }
     }
 
-    GLFWwindow* const GetWindow() { return win;  };                                 // --------- GETTER
-    bool const WindowShouldClose() { return glfwWindowShouldClose(win); }           // check Windows Flags
+    GLFWwindow* const GetWindow()   { return win;  };                                 // --------- GETTER
+    bool const WindowShouldClose()  { return glfwWindowShouldClose(win); }           // check Windows Flags
 
     // - RENDERING LOOP UESED IN MAIN
     void Update();
