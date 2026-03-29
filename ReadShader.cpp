@@ -31,3 +31,14 @@ std::string ReadShader::ReadShaderSource(const char* filePath)
 
     return buffer.str();
 }
+
+void ReadShader::PrintShaderSourceFileName(std::string fileName)
+{
+    // Print each character manually
+    for (size_t i = 0; i < fileName.size(); i++)
+    {
+        std::cout << fileName[i] << " (" << (int)fileName[i] << ")\n";
+    }
+
+
+}

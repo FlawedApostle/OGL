@@ -62,21 +62,10 @@ int main(void)
     glPointSize(10.0f);
 
     // ------------------ Read the shader file
-    //ReadShader::ReadShaderSource("E:/Documents/GithubDir/OGL/Dep/Shaders/shader.txt");           // E:\\Documents\\GithubDir\\OGL\\Dep\\Shaders\\
-
-    std::string path = "E:\\Documents\\GithubDir\\OGL\\Dep\\Shaders\\test.txt";
-    std::string src = ReadShader::ReadShaderSource(path.c_str());
-
-    // Print each character manually
-    for (size_t i = 0; i < path.size(); i++)
-    {
-        std::cout << path[i] << " (" << (int)path[i] << ")\n";
-    }
-
-
-    //std::string src = ReadShader::ReadShaderSource("E:/Documents/GithubDir/OGL/Dep/Shaders/shader.txt");
-
-    std::cout << "FILE CONTENT:\n" << src << std::endl;
+    std::string _filepath = "E:\\Documents\\GithubDir\\OGL\\Dep\\Shaders\\test.txt";
+    std::string _shadersrc = ReadShader::ReadShaderSource(_filepath.c_str());
+    ReadShader::PrintShaderSourceFileName(_filepath);
+    std::cout << "FILE CONTENT:\n" << _shadersrc << std::endl;
 
     /* Loop until the user closes the window */
     while (!Window_Main.WindowShouldClose())
