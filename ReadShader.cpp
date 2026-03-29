@@ -12,6 +12,7 @@ std::string ReadShader::ReadShaderSource(const char* filePath)
 
     std::ifstream fileStream(filePath);
 
+
     // DEBUG
     std::cout << "GOOD: " << fileStream.good() << "\n";
     std::cout << "FAIL: " << fileStream.fail() << "\n";
@@ -28,7 +29,7 @@ std::string ReadShader::ReadShaderSource(const char* filePath)
     std::stringstream buffer;
     buffer << fileStream.rdbuf();
 
-
+    //std::cout << "FILE CONTENT:\n" << fileStream.rdbuf() << std::endl;
     return buffer.str();
 }
 
