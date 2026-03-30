@@ -70,8 +70,9 @@ int main(void)
     std::string _filepath = "E:\\Documents\\GithubDir\\OGL\\Dep\\Shaders\\test.txt";
     std::string _shadersrc = ReadShader::ReadShaderSource(_filepath.c_str());               // CONVERT string to char to run through function - this is for debugging so I can check if the correct file is being read
     // DEBUG
-    ReadShader::PrintShaderSourceFileName(_filepath);                           
-    std::cout << "FILE CONTENT:\n" << _shadersrc << std::endl;
+    /*ReadShader::PrintShaderSourceFileName(_filepath);                       
+    //std::cout << "FILE CONTENT:\n" << _shadersrc << std::endl;
+    */
 
     // ----------------- KEY CALLBACKS  -- KeyCallbacks.h
     glfwSetKeyCallback(Window_Main.GetWindow(), KeyCallbacks::Key_callback_ESCAPE);
@@ -92,12 +93,14 @@ int main(void)
         // ------ TEST FUNCTIONS
         //TestFunctions::Render1(time);
 
+        /* 
         //if (glfwGetKey(Window_Main.GetWindow(), GLFW_KEY_ESCAPE) == GLFW_PRESS)
         //{
         //    const int scancode = glfwGetKeyScancode(GLFW_KEY_ESCAPE);
         //    printf("Escape\nScancode: %d\n" , scancode);
         //    glfwSetWindowShouldClose(Window_Main.GetWindow(), GLFW_TRUE);
-        //}
+        //} 
+        */
 
 
         glfwPollEvents();

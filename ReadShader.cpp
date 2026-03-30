@@ -29,7 +29,7 @@ std::string ReadShader::ReadShaderSource(const char* filePath)
     std::stringstream buffer;
     buffer << fileStream.rdbuf();
 
-    //std::cout << "FILE CONTENT:\n" << fileStream.rdbuf() << std::endl;
+    std::cout << "FILE CONTENT:\n" << fileStream.rdbuf() << std::endl;
     return buffer.str();
 }
 
